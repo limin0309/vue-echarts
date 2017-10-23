@@ -51,7 +51,7 @@
       update(){//通过url传递id 数据通过请求体
         //服务端调用res.end就会触发then中的成功的回调
         this.$http.put('/book?id=' + this.id, this.book).then(() => {
-          this.flag = false;//VueResource将then中的this处理掉了，默认指向的是当前组件
+          this.flag = false;//vueresource将then中的this处理掉了，默认指向的是当前组件
         })
         console.log(this.book);
       },
